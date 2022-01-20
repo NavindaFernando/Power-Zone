@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MemberReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e878fb62-315e-4470-a2b0-fdf1adf8e0c7">
+	<parameter name="memberId" class="java.lang.String"/>
+	<parameter name="memberName" class="java.lang.String"/>
+	<parameter name="memberAge" class="java.lang.String"/>
+	<parameter name="memberWeight" class="java.lang.String"/>
+	<parameter name="memberHeight" class="java.lang.String"/>
+	<parameter name="traningType" class="java.lang.String"/>
+	<parameter name="bodyType" class="java.lang.String"/>
+	<parameter name="traningHistory" class="java.lang.String"/>
+	<parameter name="activityLevel" class="java.lang.String"/>
+	<parameter name="currentDiet" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="200" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="116" width="555" height="24" uuid="4cdfd3f3-bd6e-408c-98d0-d0b0ef2dc237"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. 283 B2 Fernando Road Wennappuwa]]></text>
+			</staticText>
+			<image>
+				<reportElement x="215" y="-10" width="160" height="140" uuid="4c429523-e036-4586-bbfb-4c8441365771"/>
+				<imageExpression><![CDATA["assents/gym_logo.png"]]></imageExpression>
+			</image>
+			<textField pattern="HH:mm">
+				<reportElement x="0" y="171" width="555" height="20" uuid="fa7401bc-6c6c-4dca-ad92-78d322fd9607"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="85" width="555" height="33" uuid="ad9d1b20-9ee8-4ab9-9b7b-f3d83019415b"/>
+				<textElement textAlignment="Center">
+					<font size="25" isBold="true"/>
+				</textElement>
+				<text><![CDATA[The Gym]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="143" width="555" height="17" uuid="a33e55ee-261d-4833-85c7-2a6ab0a25d6e"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TheGym@gmail.com]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="0" y="157" width="555" height="20" uuid="383ee1e7-963a-41c5-abc8-ac4de3db311f"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="130" width="555" height="24" uuid="d4ff9ccf-0216-4b45-97fa-e59e7150e7b8"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mobile No. 0775919052 / 0712509195 ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="548" splitType="Stretch">
+			<image>
+				<reportElement x="40" y="0" width="278" height="189" uuid="8ca57228-1361-42fd-aa49-4f7af36744fa"/>
+				<imageExpression><![CDATA["assents/avatar boy.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="1" y="90" width="100" height="1" forecolor="#A1A1A1" uuid="db80f248-2d3f-445f-a807-bff7e55aca2d">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="256" y="91" width="299" height="1" forecolor="#A1A1A1" uuid="6e164781-7a75-4986-8e08-3eb17d28b337"/>
+			</line>
+			<textField>
+				<reportElement x="400" y="179" width="80" height="30" forecolor="#030303" uuid="51b70ae0-2b03-4d13-bb93-ad6b78ccbb1b"/>
+				<textElement textAlignment="Left">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{memberId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="274" y="67" width="150" height="30" forecolor="#6B6B6B" uuid="bf6ad43a-3fd4-44e9-a7bd-d97d28060965"/>
+				<textElement textAlignment="Left">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{memberName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="280" y="179" width="80" height="30" forecolor="#6B6B6B" uuid="9b988034-a460-47f6-ad22-9cf38e080817"/>
+				<textElement textAlignment="Right">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Member id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="219" width="100" height="30" forecolor="#6B6B6B" uuid="e2bc79eb-9e8d-4f1e-ab3b-0dd1110b29c7"/>
+				<textElement textAlignment="Right">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Member age]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="400" y="219" width="100" height="30" uuid="50eee3c2-5273-4c78-813c-72966101ba53"/>
+				<textElement textAlignment="Left">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{memberAge}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="221" y="259" width="140" height="30" forecolor="#6B6B6B" uuid="e98c872e-4be9-4965-9606-a99dee8ea1d6"/>
+				<textElement textAlignment="Right">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Member weight]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="400" y="259" width="100" height="30" uuid="80d7dbd5-d7c9-4c80-ad5f-7b4e400c92d6"/>
+				<textElement textAlignment="Left">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{memberWeight}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="180" y="166" width="1" height="114" forecolor="#A1A1A1" uuid="56c54ced-fdea-4a24-a460-884c0df7e303"/>
+			</line>
+			<staticText>
+				<reportElement x="246" y="299" width="114" height="30" forecolor="#6B6B6B" uuid="6884ec53-df55-4f4d-9745-da35e0198917"/>
+				<textElement textAlignment="Right">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Member height]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="400" y="299" width="100" height="30" uuid="44a7cbd7-5efd-442f-b811-5e3d4bb20e92"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{memberHeight}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="247" y="380" width="114" height="30" forecolor="#6B6B6B" uuid="c4b356cd-b5c3-4bbc-bb86-b45b6f5e7e1b"/>
+				<textElement textAlignment="Right">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Traning type]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="400" y="380" width="100" height="30" uuid="cfb1ba65-e7ac-47ae-8b49-fe5bab3b47a9"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{traningType}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="247" y="339" width="114" height="30" forecolor="#6B6B6B" uuid="d83a0776-58ff-4beb-9d46-e57ba3ce8d04"/>
+				<textElement textAlignment="Right">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Body type]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="400" y="339" width="100" height="30" uuid="99846cd6-e95c-4b27-97f3-c33c2fbb4e9b"/>
+				<textElement textAlignment="Left">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{bodyType}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="247" y="419" width="114" height="30" forecolor="#6B6B6B" uuid="e18363da-3bd7-426c-a9bc-a38d0abe1ee1"/>
+				<textElement textAlignment="Right">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Traning history]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="400" y="419" width="100" height="30" uuid="bf1db619-2515-4fb5-88a0-99535c6e1d80"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{traningHistory}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="248" y="459" width="114" height="30" forecolor="#6B6B6B" uuid="2760d83a-15b9-43ee-94c9-023e39b81432"/>
+				<textElement textAlignment="Right">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Activity level]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="400" y="459" width="100" height="30" uuid="af6374e0-c087-414b-a183-0285ef6393f3"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{activityLevel}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="249" y="499" width="114" height="30" forecolor="#6B6B6B" uuid="90e977d5-113f-4081-82e9-e2b6fd121293"/>
+				<textElement textAlignment="Right">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Current diet]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="400" y="499" width="100" height="30" uuid="1db2f3a0-b871-49d5-81fb-f532d3280a84"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{currentDiet}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="8" width="555" height="22" uuid="cd42be9d-c6a7-4406-9573-3de6bb740e21"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[‘Success usually comes to those who are too busy to be looking for it.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="23" width="555" height="22" forecolor="#6B6B6B" uuid="061eb7eb-a497-44d7-a9eb-2f6ff528ca39"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[- Henry David Thoreau -]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="startFormContext" prefHeight="578.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormcontroller">
+   <children>
+      <ImageView fitHeight="608.0" fitWidth="915.0" layoutY="-29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assents/loginPic.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="220.0" layoutY="213.0" text="SHAPE YOUR" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="220.0" layoutY="246.0" text="PERFECT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="371.0" layoutY="246.0" text="BODY" textFill="#26ff00">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="222.0" layoutY="297.0" text="The developing of the body through exercise" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="222.0" layoutY="313.0" text="and diet specifically , the developing of the" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="222.0" layoutY="330.0" text="physique for competitive exhibition." textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <ImageView fitHeight="37.0" fitWidth="143.0" layoutX="222.0" layoutY="362.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assents/button_starting.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="37.0" fitWidth="97.0" layoutX="360.0" layoutY="362.0" onMouseClicked="#logOut" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assents/button_exit.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="5.0" fitWidth="84.0" layoutX="221.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assents/103-1037138_free-witches-broom-clipart-clipart-circle-hdd-png.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="123.0" fitWidth="141.0" layoutX="243.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assents/logo.png" />
+         </image>
+      </ImageView>
+      <JFXProgressBar fx:id="pgb" layoutY="566.0" prefHeight="12.0" prefWidth="915.0" progress="0.0" stylesheets="@../styles/style.css" />
+   </children>
+</AnchorPane>

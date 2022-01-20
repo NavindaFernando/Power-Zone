@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Order_Report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8113d727-fa08-486c-ba63-4c4902146145">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JDBC Connection"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="itemCode" class="java.lang.String"/>
+	<parameter name="memberId" class="java.lang.String"/>
+	<parameter name="discount" class="java.lang.String"/>
+	<parameter name="balance" class="java.lang.String"/>
+	<parameter name="qty" class="java.lang.String"/>
+	<parameter name="itemName" class="java.lang.String"/>
+	<parameter name="coachName" class="java.lang.String"/>
+	<parameter name="orderId" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from `order`]]>
+	</queryString>
+	<background>
+		<band height="11" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="233" splitType="Stretch">
+			<image>
+				<reportElement x="215" y="-10" width="160" height="140" uuid="021a0122-c001-46b3-95c3-d998f80f0a05"/>
+				<imageExpression><![CDATA["assents/gym_logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="85" width="555" height="33" uuid="32bfd409-f23f-4b39-951a-4073a238d72a"/>
+				<textElement textAlignment="Center">
+					<font size="25" isBold="true"/>
+				</textElement>
+				<text><![CDATA[The Gym]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="116" width="555" height="24" uuid="51c05828-3cbb-4fe8-bec9-cb3f1ab865d9"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. 283 B2 Fernando Road Wennappuwa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="130" width="555" height="24" uuid="199c8f07-c5e6-4905-b0f1-16cff33254d3"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mobile No. 0775919052 / 0712509195 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="143" width="555" height="17" uuid="24fda4fe-6852-48ba-b5b3-33c9f8bedb59"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TheGym@gmail.com]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="0" y="157" width="555" height="20" uuid="859b6b44-2109-40c2-b545-8e1adf34dcbb"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="0" y="171" width="555" height="20" uuid="10c668cf-e1c9-4d50-8677-62bbb879893e"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="130" y="198" width="300" height="1" uuid="4986234e-f125-4e9f-ba67-3f22372bcf19"/>
+			</line>
+			<staticText>
+				<reportElement x="215" y="201" width="75" height="17" uuid="322dce8b-fc6c-43cc-9da6-ed359be0d5b6"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Order id :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="285" y="200" width="100" height="30" uuid="2ba38e9a-0535-46a4-9a6a-7df52e950be7"/>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{orderId}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="91">
+			<textField>
+				<reportElement x="80" y="61" width="100" height="30" uuid="4c37a6ab-b850-4669-8247-db1629202d34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{itemCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="61" width="78" height="30" uuid="e489e0ba-198b-46e9-9d78-156cf5383e2a"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{memberId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="61" width="100" height="30" uuid="4fc533e8-4014-48bf-83ed-14a7ed77272d"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{discount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="61" width="75" height="30" uuid="26fd0e38-37dd-4af5-91ee-fde08e3092f5"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{balance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="61" width="100" height="30" uuid="8f7c3d87-aa96-4667-9d04-4bfb04eef8fb"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="61" width="100" height="30" uuid="ce80df59-619d-411b-9c55-9dfb01e01fc6"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{itemName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="10" width="80" height="30" uuid="f6039d44-65da-4f0a-9234-763b2fb47974"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Member id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="10" width="100" height="30" uuid="362160d7-cdb7-4fe3-bf77-063e16cbfd40"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="10" width="100" height="30" uuid="bb24e49e-cb6f-4db1-b438-be59675ca5a3"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="10" width="100" height="30" uuid="6b14b3d3-d384-4aa6-8db0-40ce39b60537"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="10" width="100" height="30" uuid="5dbb1e26-911b-4468-b9f9-bca8ab88ec70"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Discount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="10" width="75" height="30" uuid="8589a1af-7a5b-4631-b008-bb29fa973c24"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Balace]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="91" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="16" width="555" height="24" uuid="fd28e709-c886-4acc-b197-3159b659f4f2"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Thank you, come again.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="31" width="555" height="18" uuid="b44aa386-41e1-4724-9c3b-ca697f33963c"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Best things from the best place]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="49" width="85" height="17" uuid="84501845-235c-41ad-b4e7-cd896f0e90cb"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Coach name :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="227" y="60" width="100" height="20" uuid="2640f4ac-2263-45fb-81da-1b9eb7e8ff4e"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{coachName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

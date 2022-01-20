@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="adminDashBoardFormContext" prefHeight="578.0" prefWidth="915.0" style="-fx-background-color: #1F2123;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminDashBoardcontroller">
+   <children>
+      <Pane layoutX="16.0" layoutY="16.0" prefHeight="549.0" prefWidth="209.0" style="-fx-background-color: #393E46;" stylesheets="@../styles/style.css">
+         <children>
+            <ImageView fitHeight="55.0" fitWidth="58.0" layoutX="77.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assents/fitness_logo_design_4x.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="53.0" layoutY="104.0" text="m n s fernando" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <JFXButton layoutY="407.0" onAction="#displayCalculator" prefHeight="48.0" prefWidth="209.0" styleClass="menubar" stylesheets="@../styles/style.css" text="TIME TABLE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutX="2.0" layoutY="167.0" onAction="#displayAdminDashBoard" prefHeight="48.0" prefWidth="209.0" styleClass="menubar" stylesheets="@../styles/style.css" text="DASHBOARD" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutX="2.0" layoutY="215.0" onAction="#displayAddCoach" prefHeight="48.0" prefWidth="209.0" styleClass="menubar" stylesheets="@../styles/style.css" text="ADD COACH" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutX="2.0" layoutY="263.0" onAction="#displayCoach" prefHeight="48.0" prefWidth="209.0" styleClass="menubar" stylesheets="@../styles/style.css" text="COACH" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutX="2.0" layoutY="311.0" onAction="#displayAddItem" prefHeight="48.0" prefWidth="209.0" styleClass="menubar" stylesheets="@../styles/style.css" text="ADD ITEM" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutX="2.0" layoutY="359.0" onAction="#displayItems" prefHeight="48.0" prefWidth="209.0" styleClass="menubar" stylesheets="@../styles/style.css" text="ITEMS" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="91.0" layoutY="126.0" text="admin" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="DASHBOARD" layoutX="180.0" layoutY="196.0" size="16" style="-fx-fill: white;" />
+            <FontAwesomeIconView glyphName="AREA_CHART" layoutX="180.0" layoutY="436.0" size="14" style="-fx-fill: white;" />
+            <FontAwesomeIconView glyphName="USER_PLUS" layoutX="181.0" layoutY="244.0" size="14" style="-fx-fill: white;" />
+            <FontAwesomeIconView glyphName="USER" layoutX="181.0" layoutY="292.0" size="15" style="-fx-fill: white;" />
+            <FontAwesomeIconView glyphName="CART_PLUS" layoutX="179.0" layoutY="340.0" size="16" style="-fx-fill: white;" />
+            <FontAwesomeIconView glyphName="SHOPPING_CART" layoutX="179.0" layoutY="389.0" size="16" style="-fx-fill: white;" />
+            <FontAwesomeIconView glyphName="GEARS" layoutX="174.0" layoutY="535.0" size="22" style="-fx-fill: white;" />
+            <FontAwesomeIconView glyphName="ARROW_CIRCLE_LEFT" layoutX="16.0" layoutY="37.0" onMouseClicked="#openLoginOwnerForm" size="27" style="-fx-fill: white;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></FontAwesomeIconView>
+         </children>
+         <styleClass>
+            <String fx:value="pane" />
+            <String fx:value="MainPaneRadius" />
+         </styleClass>
+      </Pane>
+      <Label fx:id="lblTime" layoutX="710.0" layoutY="18.0" text="00 : 00 : 00" textFill="#b5b5b5">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="610.0" layoutY="18.0" prefHeight="20.0" prefWidth="89.0" text="2021 - 08 - 18" textFill="#b5b5b5">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fx:id="imgLock" glyphName="LOCK" layoutX="884.0" layoutY="33.0" onMouseClicked="#openLoginFormOwner" size="15" style="-fx-fill: #b5b5b5;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></FontAwesomeIconView>
+      <AnchorPane fx:id="adminContext" layoutX="225.0" layoutY="48.0" prefHeight="524.0" prefWidth="678.0" />
+      <FontAwesomeIconView fx:id="imgClose" glyphName="POWER_OFF" layoutX="854.0" layoutY="33.0" onMouseClicked="#logOut" size="14" style="-fx-fill: #b5b5b5;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontAwesomeIconView>
+      <Label fx:id="lblB" layoutX="802.0" layoutY="18.0" onMouseClicked="#changeColorBlack" text="B" textFill="#b5b5b5">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label fx:id="lblA" layoutX="825.0" layoutY="19.0" onMouseClicked="#chageColorWhite" text="W" textFill="#b5b5b5">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+   </children>
+</AnchorPane>

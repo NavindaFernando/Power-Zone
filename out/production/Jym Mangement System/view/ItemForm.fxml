@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="524.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemFormcontroller">
+   <children>
+      <Pane layoutX="17.0" layoutY="7.0" prefHeight="478.0" prefWidth="495.0" style="-fx-background-color: #393E46;" stylesheets="@../styles/style.css">
+         <children>
+            <Label layoutX="24.0" layoutY="13.0" text="Item" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="65.0" layoutY="13.0" text="details" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSearch" alignment="CENTER" layoutX="332.0" layoutY="11.0" prefHeight="17.0" prefWidth="149.0" promptText="Search Item code" style="-fx-background-color: #393E46; -fx-border-radius: 50; -fx-border-color: #26ff00;" />
+            <FontAwesomeIconView glyphName="TRASH_ALT" layoutX="299.0" layoutY="31.0" size="18" style="-fx-fill: white;" text="" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <styleClass>
+            <String fx:value="pane" />
+            <String fx:value="BottomLeftAndTopLeftPaneRadius" />
+         </styleClass>
+      </Pane>
+      <Pane layoutX="516.0" layoutY="253.0" prefHeight="232.0" prefWidth="160.0" style="-fx-background-color: #393E46;" stylesheets="@../styles/style.css">
+         <children>
+            <ImageView fx:id="imageEightt" fitHeight="174.0" fitWidth="205.0" layoutX="-85.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assents/%5Bremoval.ai%5D_9d5c7dce-88c2-44e5-af0e-a994d1b3554bbb.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageEight" fitHeight="250.0" fitWidth="271.0" layoutX="15.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assents/download.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageEighttt" fitHeight="192.0" fitWidth="243.0" layoutX="-87.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assents/%5Bremoval.ai%5D_9d5c7dce-88c2-44e5-af0e-a994d1b3554bb.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="31.0" layoutY="27.0" text="Confidence comes" textFill="WHITE" />
+            <Label layoutX="29.0" layoutY="46.0" text="from discipline and" textFill="WHITE" />
+            <Label layoutX="58.0" layoutY="64.0" text="training." textFill="WHITE" />
+            <FontAwesomeIconView fx:id="eyeHide" glyphName="EYE_SLASH" layoutX="130.0" layoutY="20.0" onMouseClicked="#hideImageEight" size="18" style="-fx-fill: white;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fx:id="eyeOpen" glyphName="EYE" layoutX="130.0" layoutY="20.0" onMouseClicked="#openImageEight" size="18" style="-fx-fill: white;" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <styleClass>
+            <String fx:value="pane" />
+            <String fx:value="BottomRightPaneRadius" />
+         </styleClass>
+      </Pane>
+      <Pane layoutX="516.0" layoutY="7.0" prefHeight="115.0" prefWidth="160.0" style="-fx-background-color: #393E46;" stylesheets="@../styles/style.css">
+         <children>
+            <Label layoutX="9.0" layoutY="3.0" text="Item" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="51.0" layoutY="3.0" text="count" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="CART_ARROW_DOWN" layoutX="27.0" layoutY="72.0" size="25" style="-fx-fill: white;" />
+            <Label layoutX="59.0" layoutY="45.0" text="0" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblItems" layoutX="74.0" layoutY="45.0" text="001" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="BOOKMARK" layoutX="131.0" layoutY="21.0" size="15" style="-fx-fill: white;" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <styleClass>
+            <String fx:value="pane" />
+            <String fx:value="TopRightPaneRadius" />
+         </styleClass>
+      </Pane>
+      <FontAwesomeIconView glyphName="SEARCH" layoutX="477.0" layoutY="36.0" size="12" style="-fx-fill: white;" />
+      <Pane layoutX="516.0" layoutY="126.0" prefHeight="123.0" prefWidth="160.0" style="-fx-background-color: #393E46;" styleClass="pane" stylesheets="@../styles/style.css">
+         <children>
+            <Label layoutX="10.0" layoutY="8.0" text="Orders" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="69.0" layoutY="8.0" text="count" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="CART_ARROW_DOWN" layoutX="29.0" layoutY="78.0" size="25" style="-fx-fill: white;" />
+            <Label layoutX="60.0" layoutY="52.0" text="0" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblOrders" layoutX="75.0" layoutY="52.0" text="001" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="BOOKMARK" layoutX="132.0" layoutY="26.0" size="15" style="-fx-fill: white;" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <TableView fx:id="tblItemDetail" layoutX="27.0" layoutY="54.0" prefHeight="409.0" prefWidth="476.0" stylesheets="@../styles/style.css">
+         <columns>
+            <TableColumn fx:id="colItemCode" prefWidth="69.0" styleClass="TableColumn" text="Item code" />
+            <TableColumn fx:id="colName" prefWidth="84.0" styleClass="TableColumn" text="Name" />
+            <TableColumn fx:id="colDescription" prefWidth="104.0" styleClass="TableColumn" text="Description" />
+            <TableColumn fx:id="colQtyOnHand" prefWidth="82.0" styleClass="TableColumn" text="Qty on hand" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="65.0" styleClass="TableColumn" text="Unit price" />
+            <TableColumn fx:id="colSize" prefWidth="71.0" styleClass="TableColumn" text="Size" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

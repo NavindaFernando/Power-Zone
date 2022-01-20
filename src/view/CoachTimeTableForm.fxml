@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="524.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CoachTimeTableFormcontroller">
+   <children>
+      <Pane layoutX="14.0" layoutY="260.0" prefHeight="240.0" prefWidth="190.0" style="-fx-background-color: #393E46;" stylesheets="@../styles/style.css">
+         <children>
+            <ImageView fx:id="image" fitHeight="392.0" fitWidth="598.0" layoutX="-102.0" layoutY="-31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assents/imageedit_1_7635375902.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="216.0" layoutY="14.0" text="FeedBack" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fx:id="eyeHide" glyphName="EYE_SLASH" layoutX="10.0" layoutY="29.0" onMouseClicked="#hideImage" size="18" style="-fx-fill: white;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fx:id="eyeOpen" glyphName="EYE" layoutX="10.0" layoutY="29.0" onMouseClicked="#openImage" size="18" style="-fx-fill: white;" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+         </children>
+         <styleClass>
+            <String fx:value="BottomLeftPaneRadius" />
+            <String fx:value="pane" />
+         </styleClass>
+      </Pane>
+      <Pane layoutX="208.0" layoutY="260.0" prefHeight="240.0" prefWidth="447.0" style="-fx-background-color: #393E46;" stylesheets="@../styles/style.css">
+         <children>
+            <TableView fx:id="tblFeedBack" layoutX="15.0" layoutY="45.0" prefHeight="182.0" prefWidth="419.0" stylesheets="@../styles/style.css">
+               <columns>
+                  <TableColumn fx:id="colDate" prefWidth="111.0" styleClass="TableColumn" text="Date" />
+                  <TableColumn fx:id="colMassages" prefWidth="307.0" styleClass="TableColumn" text="Massage" />
+               </columns>
+            </TableView>
+            <TextField alignment="CENTER" layoutX="310.0" layoutY="9.0" prefHeight="27.0" prefWidth="122.0" promptText="Search date" style="-fx-background-color: #393E46; -fx-border-radius: 50; -fx-border-color: #26ff00;" />
+            <FontAwesomeIconView glyphName="SEARCH" layoutX="408.0" layoutY="27.0" size="11" style="-fx-fill: white;" />
+            <Label layoutX="15.0" layoutY="10.0" text="Feedback" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="PENCIL" layoutX="95.0" layoutY="27.0" size="13" style="-fx-fill: #FFFFFF;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+         </children>
+         <styleClass>
+            <String fx:value="BottomRightPaneRadius" />
+            <String fx:value="pane" />
+         </styleClass>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="242.0" prefWidth="513.0" style="-fx-background-color: #393E46;" stylesheets="@../styles/style.css">
+         <children>
+            <TableView fx:id="tblTimeTable" layoutX="19.0" layoutY="44.0" prefHeight="182.0" prefWidth="476.0" styleClass="pane" stylesheets="@../styles/style.css">
+               <columns>
+                  <TableColumn fx:id="colDay" prefWidth="71.0" styleClass="TableColumn" text="Day" />
+                  <TableColumn fx:id="colBranchName" prefWidth="79.0" styleClass="TableColumn" text="Branch name" />
+                  <TableColumn fx:id="colAmToPm" prefWidth="110.0" styleClass="TableColumn" text="5.00AM - 1.00PM" />
+                  <TableColumn fx:id="colPmToPm" prefWidth="110.0" styleClass="TableColumn" text="1.00PM - 9.00PM" />
+                  <TableColumn fx:id="colPmToAm" prefWidth="105.0" styleClass="TableColumn" text="9.00PM - 5.00AM" />
+               </columns>
+            </TableView>
+            <Label layoutX="21.0" layoutY="10.0" text="Time table" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField alignment="CENTER" layoutX="373.0" layoutY="9.0" prefHeight="27.0" prefWidth="122.0" promptText="Search day" style="-fx-background-color: #393E46; -fx-border-radius: 50; -fx-border-color: #26ff00;" />
+            <FontAwesomeIconView glyphName="SEARCH" layoutX="472.0" layoutY="27.0" size="11" style="-fx-fill: white;" />
+            <FontAwesomeIconView glyphName="LIST" layoutX="109.0" layoutY="28.0" size="13" style="-fx-fill: #FFFFFF;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+         </children>
+         <styleClass>
+            <String fx:value="pane" />
+            <String fx:value="TopLeftPaneRadius" />
+         </styleClass>
+      </Pane>
+      <Pane layoutX="532.0" layoutY="14.0" prefHeight="241.0" prefWidth="122.0" style="-fx-background-color: #393E46;" stylesheets="@../styles/style.css">
+         <styleClass>
+            <String fx:value="TopRightPaneRadius" />
+            <String fx:value="pane" />
+         </styleClass>
+         <children>
+            <FontAwesomeIconView glyphName="WEIXIN" layoutX="41.0" layoutY="57.0" size="40" style="-fx-fill: #FFFFFF;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+            <Label layoutX="8.0" layoutY="84.0" text="We all need people" textFill="WHITE" />
+            <Label layoutX="17.0" layoutY="107.0" text="who will give us" textFill="WHITE" />
+            <Label layoutX="21.0" layoutY="153.0" text="That's how we" textFill="WHITE" />
+            <Label layoutX="36.0" layoutY="175.0" text="improve.”" textFill="WHITE" />
+            <Label layoutX="35.0" layoutY="130.0" text="feedback." textFill="WHITE" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

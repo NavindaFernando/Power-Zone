@@ -1,0 +1,137 @@
+.jfx-progress-bar > .bar {
+    -fx-background-color: #23da03;
+}
+
+.textLabel{
+    -fx-background-color: #393E46;
+    -fx-padding: 0 5px 0px 5px;
+}
+
+.textPane{
+    -fx-background-color: #393E46;
+    -fx-border-color: white;
+    -fx-background-radius: 76, 73, 73, 0.83;
+    -fx-border-radius: 8px;
+}
+
+.menubar:hover{
+    -fx-border-color: #26ff00;
+    -fx-border-width: 0px 0px 0px 2px;
+}
+
+.pane:hover{
+    -fx-border-color: #26ff00;
+    -fx-border-width: 0px 0px 2px 0px;
+}
+
+.Allpane:hover{
+    -fx-border-color: #26ff00;
+    -fx-border-width: 2px 2px 2px 2px;
+}
+
+.OrderPane:hover{
+    -fx-border-color: #26ff00;
+    -fx-border-width: 2px 0px 0px 0px;
+}
+
+.OrderBoder{
+    -fx-border-radius: 50;
+    -fx-border-color: #26ff00;
+    -fx-background-color: #393E46;
+    -fx-background-radius: 50;
+}
+
+.field {
+    -fx-background-color: #393E46;
+    -fx-prompt-text-fill: #868686;
+    -fx-text-fill: #dddddd;
+}
+
+.textColor{
+    -fx-prompt-text-fill: #dddddd;
+    -fx-text-fill: #dddddd;
+}
+
+.combo-box {
+    -fx-text-fill: #dddddd;
+    -fx-prompt-text-fill: #dddddd;
+}
+
+.choice-box .list-cell:filled:selected .text {
+    -fx-fill: #dddddd;
+}
+
+.MainPaneRadius{
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+}
+
+.TopRightPaneRadius{
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-background-radius: 0px 30px 0px 0px;
+    -fx-border-radius: 0px 30px 0px 0px;
+}
+
+.TopLeftPaneRadius{
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-background-radius: 30px 0px 0px 0px;
+    -fx-border-radius: 30px 0px 0px 0px;
+}
+
+.BottomRightPaneRadius{
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-background-radius: 0px 0px 30px 0px;
+    -fx-border-radius: 0px 0px 30px 0px;
+}
+
+.BottomLeftPaneRadius{
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-background-radius: 0px 0px 0px 30px;
+    -fx-border-radius: 0px 0px 0px 30px;
+}
+
+.BottomLeftAndTopLeftPaneRadius{
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-background-radius: 30px 0px 0px 30px;
+    -fx-border-radius: 30px 0px 0px 30px;
+}
+
+.BottomRightAndTopRightPaneRadius{
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-background-radius: 0px 30px 30px 0px;
+    -fx-border-radius: 0px 30px 30px 0px;
+}
+
+.TopRightAndTopLeftPaneRadius{
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-background-radius: 30px 30px 0px 0px;
+    -fx-border-radius: 30px 30px 0px 0px;
+}
+
+.BottomRightAndBottomLeftPaneRadius{
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-background-radius: 0px 0px 30px 30px;
+    -fx-border-radius: 0px 0px 30px 30px;
+}
+
+.detailsFormsPaneRadius{
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-background-radius: 100px 100px 100px 100px;
+    -fx-border-radius: 100px 100px 100px 100px;
+}
+
+.TableColumn{
+    -fx-background-color: #d3d3d3;
+    -fx-size:40px;
+    -fx-text-fill: #393E46;
+    -fx-font-size: 12;
+}

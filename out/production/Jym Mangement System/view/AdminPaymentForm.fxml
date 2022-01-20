@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="524.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminPaymentFormController">
+   <children>
+      <Pane layoutX="21.0" layoutY="7.0" prefHeight="232.0" prefWidth="209.0" style="-fx-background-color: #393E46;" stylesheets="@../styles/style.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <children>
+            <Label layoutX="125.0" layoutY="418.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="217.0" layoutY="456.0" textFill="WHITE" />
+            <Label layoutX="193.0" layoutY="473.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="10.0" text="Add payment" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtPaymentName" focusColor="#26ff00" labelFloat="true" layoutX="26.0" layoutY="49.0" onAction="#selectPayment" prefHeight="25.0" prefWidth="152.0" promptText="Payment name" stylesheets="@../styles/style.css" unFocusColor="#b9b9b9">
+               <styleClass>
+                  <String fx:value="field" />
+                  <String fx:value="textColor" />
+               </styleClass></JFXTextField>
+            <JFXTextField fx:id="txtValidTime" focusColor="#26ff00" labelFloat="true" layoutX="26.0" layoutY="92.0" prefHeight="25.0" prefWidth="152.0" promptText="Valid time" stylesheets="@../styles/style.css" unFocusColor="#b9b9b9">
+               <styleClass>
+                  <String fx:value="field" />
+                  <String fx:value="textColor" />
+               </styleClass></JFXTextField>
+            <JFXTextField fx:id="txtPrice" focusColor="#26ff00" labelFloat="true" layoutX="26.0" layoutY="135.0" prefHeight="25.0" prefWidth="152.0" promptText="Price" stylesheets="@../styles/style.css" unFocusColor="#b9b9b9">
+               <styleClass>
+                  <String fx:value="field" />
+                  <String fx:value="textColor" />
+               </styleClass></JFXTextField>
+            <JFXButton buttonType="RAISED" layoutX="122.0" layoutY="176.0" onAction="#savePayment" prefHeight="35.0" prefWidth="58.0" style="-fx-background-color: #28c00e; -fx-background-radius: 20;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <FontAwesomeIconView glyphName="BOOKMARK" layoutX="160.0" layoutY="66.0" size="12" style="-fx-fill: white;" />
+            <FontAwesomeIconView glyphName="HISTORY" layoutX="159.0" layoutY="108.0" size="12" style="-fx-fill: white;" />
+            <FontAwesomeIconView glyphName="DOLLAR" layoutX="161.0" layoutY="151.0" size="12" style="-fx-fill: white;" />
+            <JFXButton buttonType="RAISED" layoutX="26.0" layoutY="176.0" onAction="#updatePayment" prefHeight="35.0" prefWidth="89.0" style="-fx-background-color: #393E46; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #28c00e;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+         <styleClass>
+            <String fx:value="pane" />
+            <String fx:value="TopLeftPaneRadius" />
+         </styleClass>
+      </Pane>
+      <Pane layoutX="236.0" layoutY="7.0" prefHeight="232.0" prefWidth="433.0" style="-fx-background-color: #393E46;" stylesheets="@../styles/style.css">
+         <children>
+            <Label layoutX="14.0" layoutY="9.0" text="Payment method" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tblPayment" layoutX="14.0" layoutY="41.0" prefHeight="171.0" prefWidth="404.0" stylesheets="@../styles/style.css">
+               <columns>
+                  <TableColumn fx:id="colPaymentName" prefWidth="150.0" styleClass="TableColumn" text="Payment name" />
+                  <TableColumn fx:id="colValidTime" prefWidth="119.0" styleClass="TableColumn" text="Valid time" />
+                  <TableColumn fx:id="colPrice" prefWidth="134.0" styleClass="TableColumn" text="Price" />
+               </columns>
+            </TableView>
+            <FontAwesomeIconView glyphName="TRASH_ALT" layoutX="396.0" layoutY="29.0" onMouseClicked="#deletePayment" size="16" style="-fx-fill: white;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></FontAwesomeIconView>
+            <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="363.0" layoutY="15.0" onMouseClicked="#clearText" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assents/icons8-broom-90.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <FontAwesomeIconView glyphName="SEARCH" layoutX="335.0" layoutY="29.0" onMouseClicked="#searchPayment" size="14" style="-fx-fill: white;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+         </children>
+         <styleClass>
+            <String fx:value="pane" />
+            <String fx:value="TopRightPaneRadius" />
+         </styleClass>
+      </Pane>
+      <Pane layoutX="382.0" layoutY="245.0" prefHeight="249.0" prefWidth="288.0" style="-fx-background-color: #393E46;" stylesheets="@../styles/style.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <styleClass>
+            <String fx:value="pane" />
+            <String fx:value="BottomRightPaneRadius" />
+         </styleClass>
+         <children>
+            <ImageView fx:id="image" fitHeight="301.0" fitWidth="530.0" layoutX="-107.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assents/imageedit_1_5976931383.png" />
+               </image>
+            </ImageView>
+            <FontAwesomeIconView fx:id="eyeHide" glyphName="EYE_SLASH" layoutX="256.0" layoutY="25.0" onMouseClicked="#hideImageTen" size="18" style="-fx-fill: white;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fx:id="eyeOpen" glyphName="EYE" layoutX="256.0" layoutY="25.0" onMouseClicked="#openImageTen" size="18" style="-fx-fill: white;" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+         </children>
+      </Pane>
+      <Pane layoutX="21.0" layoutY="246.0" prefHeight="249.0" prefWidth="356.0" style="-fx-background-color: #393E46;" stylesheets="@../styles/style.css">
+         <children>
+            <TextField fx:id="txtAnswer" alignment="CENTER_RIGHT" layoutX="190.0" layoutY="29.0" prefHeight="25.0" prefWidth="142.0" promptText="0" style="-fx-background-color: #393E46; -fx-background-radius: 50; -fx-border-radius: 50; -fx-border-color: #26ff00;" stylesheets="@../styles/style.css">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="field" />
+                  <String fx:value="textColor" />
+               </styleClass>
+            </TextField>
+            <Label fx:id="label" layoutX="292.0" layoutY="8.0" text="0000" textFill="#909090">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btn7" buttonType="RAISED" layoutX="31.0" layoutY="76.0" onAction="#input7" prefHeight="31.0" prefWidth="64.0" style="-fx-background-color: #393E46; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #28c00e;" text="7" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btn8" buttonType="RAISED" layoutX="112.0" layoutY="76.0" onAction="#input8" prefHeight="31.0" prefWidth="64.0" style="-fx-background-color: #393E46; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #28c00e;" text="8" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btn9" buttonType="RAISED" layoutX="191.0" layoutY="76.0" onAction="#input9" prefHeight="31.0" prefWidth="64.0" style="-fx-background-color: #393E46; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #28c00e;" text="9" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="269.0" layoutY="76.0" onAction="#btnMax" prefHeight="31.0" prefWidth="64.0" style="-fx-background-color: #393E46; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #28c00e;" text="+" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btn4" buttonType="RAISED" layoutX="31.0" layoutY="116.0" onAction="#input4" prefHeight="31.0" prefWidth="64.0" style="-fx-background-color: #393E46; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #28c00e;" text="4" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btn5" buttonType="RAISED" layoutX="112.0" layoutY="116.0" onAction="#input5" prefHeight="31.0" prefWidth="64.0" style="-fx-background-color: #393E46; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #28c00e;" text="5" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btn6" buttonType="RAISED" layoutX="191.0" layoutY="116.0" onAction="#input6" prefHeight="31.0" prefWidth="64.0" style="-fx-background-color: #393E46; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #28c00e;" text="6" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="269.0" layoutY="116.0" onAction="#btnMin" prefHeight="31.0" prefWidth="64.0" style="-fx-background-color: #393E46; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #28c00e;" text="-" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btn1" buttonType="RAISED" layoutX="31.0" layoutY="157.0" onAction="#input1" prefHeight="31.0" prefWidth="64.0" style="-fx-background-color: #393E46; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #28c00e;" text="1" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btn2" buttonType="RAISED" layoutX="112.0" layoutY="157.0" onAction="#input2" prefHeight="31.0" prefWidth="64.0" style="-fx-background-color: #393E46; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #28c00e;" text="2" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btn3" buttonType="RAISED" layoutX="191.0" layoutY="157.0" onAction="#input3" prefHeight="31.0" prefWidth="64.0" style="-fx-background-color: #393E46; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #28c00e;" text="3" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="269.0" layoutY="157.0" onAction="#btnIncrease" prefHeight="31.0" prefWidth="64.0" style="-fx-background-color: #393E46; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #28c00e;" text="*" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="31.0" layoutY="197.0" onAction="#btnFullStop" prefHeight="31.0" prefWidth="64.0" style="-fx-background-color: #393E46; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #28c00e;" text="." textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btn0" buttonType="RAISED" layoutX="112.0" layoutY="197.0" onAction="#input0" prefHeight="31.0" prefWidth="64.0" style="-fx-background-color: #393E46; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #28c00e;" text="0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="191.0" layoutY="197.0" onAction="#btnequal" prefHeight="31.0" prefWidth="64.0" style="-fx-background-color: #393E46; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #28c00e;" text="=" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="269.0" layoutY="197.0" onAction="#btnDivision" prefHeight="31.0" prefWidth="64.0" style="-fx-background-color: #393E46; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #28c00e;" text="/" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="32.0" layoutY="29.0" text="Calculator" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <styleClass>
+            <String fx:value="pane" />
+            <String fx:value="BottomLeftPaneRadius" />
+         </styleClass>
+      </Pane>
+   </children>
+</AnchorPane>

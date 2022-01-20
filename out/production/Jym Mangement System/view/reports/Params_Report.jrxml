@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Params_Report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="507b50f8-8f58-48ab-b2a3-1158e1219554">
+	<parameter name="id" class="java.lang.String"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="contact" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="555" height="30" uuid="0e1ac8d7-2dc1-4f71-bda2-c5d0f21953f5"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Useage Of Bean Array & Parameters]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="555" height="30" uuid="264e33cc-6225-4e93-a6dd-aa34a70538e0"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Member Records]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="182" splitType="Stretch">
+			<textField>
+				<reportElement x="288" y="31" width="100" height="30" uuid="1b516207-6f5d-462b-aed5-c77d3ad8f07f"/>
+				<textFieldExpression><![CDATA[$P{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="79" width="100" height="30" uuid="6febb6f7-acf5-402f-8cd9-66ebf5480f4b"/>
+				<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="127" width="100" height="30" uuid="d1d8e815-8041-46fd-8c12-dda5e3a3d376"/>
+				<textFieldExpression><![CDATA[$P{contact}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="0" width="280" height="182" uuid="03324a78-79ac-4367-82ed-c67905bf25c5"/>
+				<imageExpression><![CDATA["assents/boy.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

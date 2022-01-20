@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="524.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderFormcontroller">
+   <children>
+      <Pane layoutX="416.0" layoutY="292.0" prefHeight="218.0" prefWidth="250.0" style="-fx-background-color: #393E46;" stylesheets="@../styles/style.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <styleClass>
+            <String fx:value="pane" />
+            <String fx:value="BottomRightPaneRadius" />
+         </styleClass>
+         <children>
+            <Label fx:id="lblTotalOrder" layoutX="127.0" layoutY="178.0" text="001" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imageTen" fitHeight="336.0" fitWidth="591.0" layoutX="-179.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assents/imageedit_1_5048046990.png" />
+               </image>
+            </ImageView>
+            <FontAwesomeIconView fx:id="eyeHide" glyphName="EYE_SLASH" layoutX="217.0" layoutY="21.0" onMouseClicked="#hideImageTen" size="18" style="-fx-fill: white;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fx:id="eyeOpen" glyphName="EYE" layoutX="218.0" layoutY="21.0" onMouseClicked="#openImageTen" size="18" style="-fx-fill: white;" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+            <JFXButton buttonType="RAISED" layoutX="12.0" layoutY="175.0" onAction="#placeOrder" prefHeight="27.0" prefWidth="89.0" style="-fx-background-color: #393E46; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #28c00e;" text="Place order" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="13.0" layoutY="138.0" onMouseClicked="#openOrderDetailReport" prefHeight="21.0" prefWidth="71.0" style="-fx-background-color: #393E46; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #28c00e;" text="Report" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane layoutX="416.0" layoutY="92.0" prefHeight="193.0" prefWidth="250.0" style="-fx-background-color: #393E46;" styleClass="pane" stylesheets="@../styles/style.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <children>
+            <Label layoutX="15.0" layoutY="7.0" text="Choose" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="77.0" layoutY="7.0" text="your item" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbItemCodes" focusColor="#26ff00" labelFloat="true" layoutX="15.0" layoutY="50.0" prefHeight="25.0" prefWidth="217.0" promptText="Item code" styleClass="choice-box" stylesheets="@../styles/style.css" unFocusColor="#948f8f" />
+            <JFXComboBox fx:id="cmbMemberIds" focusColor="#26ff00" labelFloat="true" layoutX="14.0" layoutY="92.0" prefHeight="25.0" prefWidth="217.0" promptText="Member id" styleClass="choice-box" stylesheets="@../styles/style.css" unFocusColor="#948f8f" />
+            <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="213.0" layoutY="11.0" onMouseClicked="#clearText" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assents/icons8-broom-90.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtQty" alignment="CENTER" layoutX="12.0" layoutY="137.0" onKeyReleased="#textFields_Key_Released" prefHeight="35.0" prefWidth="62.0" promptText="Qty" stylesheets="@../styles/style.css">
+               <styleClass>
+                  <String fx:value="OrderBoder" />
+                  <String fx:value="field" />
+               </styleClass></TextField>
+            <JFXButton fx:id="btmAddToCart" buttonType="RAISED" layoutX="142.0" layoutY="137.0" onAction="#addToCart" prefHeight="35.0" prefWidth="89.0" style="-fx-background-color: #28c00e; -fx-background-radius: 20;" text="Add to cart" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="83.0" layoutY="137.0" onMouseClicked="#orderReport" prefHeight="35.0" prefWidth="50.0" style="-fx-background-color: #393E46; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #28c00e;" text="Bill" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane layoutX="9.0" layoutY="436.0" prefHeight="74.0" prefWidth="400.0" style="-fx-background-color: #393E46;" stylesheets="@../styles/style.css">
+         <children>
+            <Label layoutX="20.0" layoutY="1.0" text="Item " textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtItemName" focusColor="#26ff00" labelFloat="true" layoutX="20.0" layoutY="38.0" prefHeight="25.0" prefWidth="113.0" promptText="Name" styleClass="textColor" stylesheets="@../styles/style.css" unFocusColor="#948f8f" />
+            <JFXTextField fx:id="txtItemQtyOnHand" focusColor="#26ff00" labelFloat="true" layoutX="149.0" layoutY="38.0" prefHeight="25.0" prefWidth="113.0" promptText="Qty on hand" styleClass="textColor" stylesheets="@../styles/style.css" unFocusColor="#948f8f" />
+            <JFXTextField fx:id="txtItemUnitPrice" focusColor="#26ff00" labelFloat="true" layoutX="278.0" layoutY="38.0" prefHeight="25.0" prefWidth="113.0" promptText="Unit price" styleClass="textColor" stylesheets="@../styles/style.css" unFocusColor="#948f8f" />
+            <Label layoutX="61.0" layoutY="1.0" text="details" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="SITEMAP" layoutX="378.0" layoutY="19.0" size="14" style="-fx-fill: white;" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <styleClass>
+            <String fx:value="pane" />
+            <String fx:value="BottomLeftPaneRadius" />
+         </styleClass>
+      </Pane>
+      <Pane layoutX="9.0" layoutY="356.0" prefHeight="74.0" prefWidth="400.0" style="-fx-background-color: #393E46;" styleClass="pane" stylesheets="@../styles/style.css">
+         <children>
+            <Label layoutX="20.0" layoutY="1.0" text="Member" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtMemberName" focusColor="#26ff00" labelFloat="true" layoutX="20.0" layoutY="38.0" prefHeight="25.0" prefWidth="113.0" promptText="Name" styleClass="textColor" stylesheets="@../styles/style.css" unFocusColor="#948f8f" />
+            <JFXTextField fx:id="txtMemberAddress" focusColor="#26ff00" labelFloat="true" layoutX="149.0" layoutY="38.0" prefHeight="25.0" prefWidth="113.0" promptText="Address" styleClass="textColor" stylesheets="@../styles/style.css" unFocusColor="#948f8f" />
+            <JFXTextField fx:id="txtMemberContact" focusColor="#26ff00" labelFloat="true" layoutX="279.0" layoutY="38.0" prefHeight="25.0" prefWidth="113.0" promptText="Contact" styleClass="textColor" stylesheets="@../styles/style.css" unFocusColor="#948f8f" />
+            <Label layoutX="89.0" layoutY="1.0" text="details" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="USER" layoutX="378.0" layoutY="20.0" size="16" style="-fx-fill: white;" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Pane layoutX="9.0" layoutY="92.0" prefHeight="258.0" prefWidth="400.0" style="-fx-background-color: #393E46;" styleClass="pane" stylesheets="@../styles/style.css">
+         <children>
+            <Label layoutX="20.0" layoutY="8.0" text="Order" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="69.0" layoutY="8.0" text="details" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="313.0" layoutY="240.0" text="Order" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="346.0" layoutY="240.0" text="id  :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblOrderId" layoutX="368.0" layoutY="240.0" text="0001" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" layoutX="317.0" layoutY="12.0" text="00 : 00 : 00" textFill="#b5b5b5">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate" layoutX="229.0" layoutY="12.0" prefHeight="20.0" prefWidth="73.0" text="2021-08-18" textFill="#b5b5b5">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="TRASH_ALT" layoutX="197.0" layoutY="27.0" onMouseClicked="#clearRow" size="18" style="-fx-fill: white;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Pane layoutX="9.0" layoutY="12.0" prefHeight="74.0" prefWidth="656.0" style="-fx-background-color: #393E46;" stylesheets="@../styles/style.css">
+         <children>
+            <Label layoutX="21.0" layoutY="2.0" text="Balance" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtTtl" focusColor="#26ff00" labelFloat="true" layoutX="9.0" layoutY="38.0" prefHeight="25.0" prefWidth="89.0" promptText="Gross amount" styleClass="textColor" stylesheets="@../styles/style.css" unFocusColor="#948f8f" />
+            <JFXTextField fx:id="txtDiscount" focusColor="#26ff00" labelFloat="true" layoutX="114.0" layoutY="38.0" onAction="#selectDiscount" prefHeight="25.0" prefWidth="100.0" promptText="Discount % (ex : 5)" styleClass="textColor" stylesheets="@../styles/style.css" unFocusColor="#948f8f" />
+            <JFXTextField fx:id="txtBalance" focusColor="#26ff00" labelFloat="true" layoutX="231.0" layoutY="38.0" prefHeight="25.0" prefWidth="89.0" promptText="Balance" styleClass="textColor" stylesheets="@../styles/style.css" unFocusColor="#948f8f" />
+            <Label layoutX="85.0" layoutY="2.0" text="details" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXRadioButton layoutX="557.0" layoutY="15.0" text="Cash pay" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton layoutX="557.0" layoutY="46.0" text="Card pay" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXRadioButton>
+            <FontAwesomeIconView glyphName="DOLLAR" layoutX="142.0" layoutY="20.0" size="15" style="-fx-fill: white;" />
+            <JFXTextField fx:id="txtCash" focusColor="#26ff00" labelFloat="true" layoutX="336.0" layoutY="38.0" onAction="#selectCash" prefHeight="25.0" prefWidth="89.0" promptText="Cash" styleClass="textColor" stylesheets="@../styles/style.css" unFocusColor="#948f8f" />
+            <JFXTextField fx:id="txtRemaining" focusColor="#26ff00" labelFloat="true" layoutX="441.0" layoutY="38.0" prefHeight="25.0" prefWidth="89.0" promptText="Remaining" styleClass="textColor" stylesheets="@../styles/style.css" unFocusColor="#948f8f" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <styleClass>
+            <String fx:value="pane" />
+            <String fx:value="TopRightAndTopLeftPaneRadius" />
+         </styleClass>
+      </Pane>
+      <TableView fx:id="tblCart" layoutX="16.0" layoutY="137.0" prefHeight="193.0" prefWidth="385.0" stylesheets="@../styles/style.css">
+        <columns>
+          <TableColumn minWidth="0.0" prefWidth="0.0" text="C2" />
+            <TableColumn fx:id="colCode" prefWidth="75.0" styleClass="TableColumn" text="Item code" />
+            <TableColumn fx:id="colName" prefWidth="107.0" styleClass="TableColumn" text="Name" />
+            <TableColumn fx:id="colQty" prefWidth="62.0" styleClass="TableColumn" text="Qty" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="66.0" styleClass="TableColumn" text="Unit price" />
+            <TableColumn fx:id="colTotal" prefWidth="74.0" styleClass="TableColumn" text="Total" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

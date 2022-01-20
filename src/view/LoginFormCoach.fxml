@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginCoachContext" prefHeight="578.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormCoachcontroller">
+   <children>
+      <ImageView fitHeight="617.0" fitWidth="921.0" layoutX="-6.0" layoutY="-36.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.38372802734375" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-36.0">
+         <image>
+            <Image url="@../assents/HD-wallpaper-women-sneakers-fitness-model-girl-weight-sports-sport.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="545.0" layoutY="84.0" text="WORK HARD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="545.0" layoutY="116.0" text="GET" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="620.0" layoutY="116.0" text="RESULTS" textFill="#26ff00">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="4.0" fitWidth="45.0" layoutX="544.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assents/103-1037138_free-witches-broom-clipart-clipart-circle-hdd-png.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="547.0" layoutY="170.0" text="Success usually comes to those who" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="547.0" layoutY="186.0" text="are too busy to be looking for it." textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <JFXTextField fx:id="txtUserName" focusColor="#26ff00" labelFloat="true" layoutX="547.0" layoutY="228.0" onAction="#moveToPassword" prefHeight="25.0" prefWidth="218.0" promptText="Username" styleClass="textColor" stylesheets="@../styles/style.css" unFocusColor="#e1e1e1" />
+      <ImageView fitHeight="123.0" fitWidth="141.0" layoutX="556.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assents/logo.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="678.0" layoutY="312.0" onMouseClicked="#openDashBoardForm" prefHeight="36.0" prefWidth="86.0" style="-fx-background-color: #28c00e; -fx-background-radius: 20;" text="LOGIN" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <FontAwesomeIconView glyphName="USER" layoutX="524.0" layoutY="244.0" size="13" style="-fx-fill: white;" />
+      <FontAwesomeIconView glyphName="LOCK" layoutX="524.0" layoutY="294.0" size="15" style="-fx-fill: white;" />
+      <FontAwesomeIconView glyphName="ARROW_CIRCLE_LEFT" layoutX="14.0" layoutY="38.0" onMouseClicked="#openOwnerForm" size="30" style="-fx-fill: white;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></FontAwesomeIconView>
+      <Label fx:id="lblUserName" layoutX="547.0" layoutY="214.0" text="User name or password does not match !" textFill="RED" visible="false">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <JFXPasswordField fx:id="txtPassword" focusColor="#26ff00" layoutX="547.0" layoutY="277.0" prefWidth="218.0" promptText="Password" styleClass="textColor" stylesheets="@../styles/style.css" unFocusColor="#e1e1e1" />
+      <JFXCheckBox fx:id="checkBox" checkedColor="#1fb904" layoutX="547.0" layoutY="312.0" onAction="#checkPassword" text="Show password" textFill="WHITE" unCheckedColor="#e1e1e1" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="memberContext" prefHeight="524.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MembersFormcontroller">
+   <children>
+      <Pane layoutX="7.0" layoutY="25.0" prefHeight="477.0" prefWidth="76.0" style="-fx-background-color: #393E46;" stylesheets="@../styles/style.css">
+         <children>
+            <Label layoutX="24.0" layoutY="7.0" text="Do" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="39.0" text="Nothing" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="87.0" text="work" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="110.0" text="unless" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="134.0" text="you do." textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="63.0" text="will" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <styleClass>
+            <String fx:value="pane" />
+            <String fx:value="BottomLeftAndTopLeftPaneRadius" />
+         </styleClass>
+      </Pane>
+      <Pane layoutX="408.0" layoutY="277.0" prefHeight="62.0" prefWidth="258.0" style="-fx-background-color: #393E46;" styleClass="pane" stylesheets="@../styles/style.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <children>
+            <FontAwesomeIconView glyphName="BOOKMARK" layoutX="239.0" layoutY="19.0" size="13" style="-fx-fill: white;" />
+         </children>
+      </Pane>
+      <Pane layoutX="408.0" layoutY="345.0" prefHeight="62.0" prefWidth="258.0" style="-fx-background-color: #393E46;" styleClass="pane" stylesheets="@../styles/style.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <children>
+            <FontAwesomeIconView glyphName="BOOKMARK" layoutX="240.0" layoutY="19.0" size="13" style="-fx-fill: white;" />
+            <Label layoutX="8.0" layoutY="5.0" text="Membership due" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="88.0" layoutY="25.0" prefHeight="246.0" prefWidth="577.0" style="-fx-background-color: #393E46;" stylesheets="@../styles/style.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <children>
+            <Pane layoutY="252.0" prefHeight="225.0" prefWidth="314.0" style="-fx-background-color: #393E46;" styleClass="pane" stylesheets="@../styles/style.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <children>
+                  <ImageView fx:id="imageNine" fitHeight="393.0" fitWidth="643.0" layoutX="-204.0" layoutY="-94.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assents/imageedit_1_6827341518.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="125.0" layoutY="418.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="7.0" text="mber details" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="9.0" layoutY="7.0" text="Me" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="-54.0" layoutY="156.0" text="do" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="PENCIL_SQUARE_ALT" layoutX="136.0" layoutY="26.0" size="16" style="-fx-fill: white;" />
+            <FontAwesomeIconView glyphName="TRASH_ALT" layoutX="376.0" layoutY="25.0" onMouseClicked="#clearMemeber" size="17" style="-fx-fill: white;" />
+            <TextField fx:id="txtSearchMember" alignment="CENTER" layoutX="403.0" layoutY="6.0" prefHeight="20.0" prefWidth="149.0" promptText="Search Item code" style="-fx-background-color: #393E46; -fx-border-radius: 50; -fx-border-color: #26ff00;" />
+            <FontAwesomeIconView glyphName="SEARCH" layoutX="531.0" layoutY="23.0" size="10" style="-fx-fill: white;" />
+            <Label layoutX="217.0" layoutY="456.0" textFill="WHITE" />
+            <Label layoutX="328.0" layoutY="255.0" text="All members" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="USER" layoutX="418.0" layoutY="296.0" size="10" style="-fx-fill: white;" />
+            <FontAwesomeIconView glyphName="USER" layoutX="417.0" layoutY="366.0" size="10" style="-fx-fill: white;" />
+            <Label layoutX="193.0" layoutY="473.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblMember" layoutX="459.0" layoutY="282.0" text="001" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="443.0" layoutY="351.0" text="002" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="433.0" layoutY="282.0" text="0" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="433.0" layoutY="351.0" text="0" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="TASKS" layoutX="-56.0" layoutY="451.0" size="25" style="-fx-fill: white;" />
+            <FontAwesomeIconView fx:id="eyeHide" glyphName="EYE_SLASH" layoutX="283.0" layoutY="279.0" onMouseClicked="#hideImageNine" size="18" style="-fx-fill: white;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fx:id="eyeOpen" glyphName="EYE" layoutX="283.0" layoutY="279.0" onMouseClicked="#openImageNine" size="18" style="-fx-fill: white;" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+            <TableView fx:id="tblMemberDetails" layoutX="5.0" layoutY="40.0" prefHeight="198.0" prefWidth="568.0" stylesheets="@../styles/style.css">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="66.0" styleClass="TableColumn" text="ID" />
+                <TableColumn fx:id="colName" prefWidth="84.0" styleClass="TableColumn" text="Name" />
+                  <TableColumn fx:id="colContact" prefWidth="84.0" styleClass="TableColumn" text="Contact" />
+                  <TableColumn fx:id="colGender" prefWidth="61.0" styleClass="TableColumn" text="Gender" />
+                  <TableColumn fx:id="colAddress" prefWidth="107.0" styleClass="TableColumn" text="Address" />
+                  <TableColumn fx:id="colDateOfBirth" prefWidth="84.0" styleClass="TableColumn" text="Date og birth" />
+                  <TableColumn fx:id="colOccupation" prefWidth="81.0" styleClass="TableColumn" text="Occupation" />
+              </columns>
+            </TableView>
+            <Label layoutX="442.0" layoutY="282.0" text="00" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <styleClass>
+            <String fx:value="pane" />
+            <String fx:value="TopRightPaneRadius" />
+         </styleClass>
+      </Pane>
+      <Pane layoutX="408.0" layoutY="413.0" onMouseClicked="#memberDetailReport" prefHeight="62.0" prefWidth="258.0" style="-fx-background-color: #393E46;" styleClass="pane" stylesheets="@../styles/style.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <children>
+            <FontAwesomeIconView glyphName="LEGAL" layoutX="238.0" layoutY="19.0" size="15" style="-fx-fill: white;" />
+            <Label layoutX="8.0" layoutY="6.0" text="Body details Report" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="47.0" layoutY="30.0" text="You must know our gym rules !" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Pane layoutX="409.0" layoutY="480.0" prefHeight="21.0" prefWidth="258.0" style="-fx-background-color: #393E46;" stylesheets="@../styles/style.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <styleClass>
+            <String fx:value="pane" />
+            <String fx:value="BottomRightPaneRadius" />
+         </styleClass>
+      </Pane>
+   </children>
+</AnchorPane>

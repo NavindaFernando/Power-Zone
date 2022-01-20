@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="524.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddMemberFormcontroller">
+   <children>
+      <Pane layoutX="16.0" layoutY="20.0" prefHeight="493.0" prefWidth="313.0" style="-fx-background-color: #393E46;" stylesheets="@../styles/style.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <children>
+            <Pane layoutX="317.0" prefHeight="230.0" prefWidth="317.0" style="-fx-background-color: #393E46;" stylesheets="@../styles/style.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <children>
+                  <Pane layoutX="42.0" layoutY="71.0" prefHeight="38.0" prefWidth="234.0" styleClass="textPane">
+                     <children>
+                        <FontAwesomeIconView glyphName="USER" layoutX="210.0" layoutY="23.0" size="12" style="-fx-fill: white;" />
+                        <TextField fx:id="txtAge" layoutX="14.0" layoutY="5.0" onKeyReleased="#textFields_Key_Released" prefHeight="28.0" prefWidth="194.0" promptText="years" style="-fx-background-color: #393E46;" styleClass="field" />
+                     </children>
+                  </Pane>
+                  <Label layoutX="48.0" layoutY="62.0" styleClass="textLabel" text="Member age" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="42.0" layoutY="126.0" prefHeight="38.0" prefWidth="234.0" styleClass="textPane">
+                     <children>
+                        <FontAwesomeIconView glyphName="STREET_VIEW" layoutX="209.0" layoutY="23.0" size="12" style="-fx-fill: white;" />
+                        <TextField fx:id="txtWeight" layoutX="12.0" layoutY="6.0" onKeyReleased="#textFields_Key_Released" prefHeight="28.0" prefWidth="194.0" promptText="kg" style="-fx-background-color: #393E46;" styleClass="field" />
+                     </children>
+                  </Pane>
+                  <Label layoutX="48.0" layoutY="117.0" styleClass="textLabel" text="Member weight" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="42.0" layoutY="182.0" prefHeight="38.0" prefWidth="234.0" styleClass="textPane">
+                     <children>
+                        <FontAwesomeIconView glyphName="CHILD" layoutX="211.0" layoutY="23.0" size="12" style="-fx-fill: white;" />
+                        <TextField fx:id="txtHeight" layoutX="12.0" layoutY="5.0" onKeyReleased="#textFields_Key_Released" prefHeight="28.0" prefWidth="194.0" promptText="m" style="-fx-background-color: #393E46;" styleClass="field" />
+                     </children>
+                  </Pane>
+                  <Label layoutX="49.0" layoutY="173.0" styleClass="textLabel" text="Member height" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="106.0" layoutY="21.0" text="Body Details" textFill="#26ff00">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fx:id="lblBodyDetailHide" glyphName="CHEVRON_CIRCLE_DOWN" layoutX="234.0" layoutY="42.0" onMouseClicked="#openBodyDetail" size="18" style="-fx-fill: white;" wrappingWidth="20.999998658895493" />
+                  <FontAwesomeIconView fx:id="lblBodyDetailOpen" glyphName="CHEVRON_CIRCLE_UP" layoutX="234.0" layoutY="42.0" onMouseClicked="#hideBodyDetail" size="18" style="-fx-fill: white;" visible="false" wrappingWidth="20.999998658895493" />
+               </children>
+               <styleClass>
+                  <String fx:value="pane" />
+                  <String fx:value="TopRightPaneRadius" />
+               </styleClass>
+            </Pane>
+            <Pane layoutX="317.0" layoutY="234.0" prefHeight="259.0" prefWidth="317.0" style="-fx-background-color: #393E46;">
+               <styleClass>
+                  <String fx:value="BottomRightPaneRadius" />
+                  <String fx:value="pane" />
+               </styleClass></Pane>
+            <JFXButton fx:id="btnPrint" buttonType="RAISED" layoutX="422.0" layoutY="453.0" onAction="#printMember" prefHeight="32.0" prefWidth="81.0" style="-fx-background-color: #393E46 #393E46; -fx-background-radius: 20; -fx-border-color: #28c00e; -fx-border-radius: 20;" text="Report" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fx:id="imageThree" fitHeight="283.0" fitWidth="465.0" layoutX="186.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assents/imageedit_1_7901719662.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="114.0" layoutY="20.0" text="mber Details" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="87.0" layoutY="20.0" text="Me" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="15.0" fitWidth="16.0" layoutX="186.0" layoutY="455.0" onMouseClicked="#clearTextField" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assents/icons8-broom-90.png" />
+               </image>
+            </ImageView>
+            <FontAwesomeIconView glyphName="TRASH_ALT" layoutX="162.0" layoutY="467.0" onMouseClicked="#deleteMember" size="14" style="-fx-fill: white;" wrappingWidth="20.999998658895493" />
+            <FontAwesomeIconView glyphName="SEARCH" layoutX="109.0" layoutY="466.0" onMouseClicked="#searchMembers" size="12" style="-fx-fill: white;" />
+            <FontAwesomeIconView glyphName="ROTATE_RIGHT" layoutX="135.0" layoutY="467.0" onMouseClicked="#updateMember" size="13" style="-fx-fill: white;" wrappingWidth="20.999998658895493" />
+            <FontAwesomeIconView fx:id="eyeHide" glyphName="EYE_SLASH" layoutX="601.0" layoutY="259.0" onMouseClicked="#hideImageThree" size="18" style="-fx-fill: white;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fx:id="eyeOpen" glyphName="EYE" layoutX="601.0" layoutY="259.0" onMouseClicked="#openImageThree" size="18" style="-fx-fill: white;" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+            <Pane layoutX="40.0" layoutY="72.0" prefHeight="38.0" prefWidth="234.0" styleClass="textPane">
+               <children>
+                  <FontAwesomeIconView glyphName="BOOKMARK" layoutX="211.0" layoutY="23.0" size="12" style="-fx-fill: white;" />
+                  <TextField fx:id="txtId" layoutX="14.0" layoutY="6.0" onKeyReleased="#textFields_Key_Released" prefHeight="28.0" prefWidth="194.0" promptText="M001" styleClass="field" stylesheets="@../styles/style.css" />
+               </children>
+            </Pane>
+            <Label layoutX="43.0" layoutY="64.0" styleClass="textLabel" text="Member id" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Pane layoutX="40.0" layoutY="127.0" prefHeight="38.0" prefWidth="234.0" styleClass="textPane">
+               <children>
+                  <FontAwesomeIconView glyphName="USER" layoutX="210.0" layoutY="23.0" size="12" style="-fx-fill: white;" />
+                  <TextField fx:id="txtName" layoutX="14.0" layoutY="5.0" onKeyReleased="#textFields_Key_Released" prefHeight="28.0" prefWidth="194.0" promptText="firstname lastname" style="-fx-background-color: #393E46;" styleClass="field" />
+               </children>
+            </Pane>
+            <Label layoutX="44.0" layoutY="119.0" styleClass="textLabel" text="Member name" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Pane layoutX="40.0" layoutY="182.0" prefHeight="38.0" prefWidth="234.0" styleClass="textPane">
+               <children>
+                  <FontAwesomeIconView glyphName="PHONE" layoutX="210.0" layoutY="24.0" size="14" style="-fx-fill: white;" />
+                  <TextField fx:id="txtContact" layoutX="14.0" layoutY="6.0" onKeyReleased="#textFields_Key_Released" prefHeight="28.0" prefWidth="194.0" promptText="07#-#######" style="-fx-background-color: #393E46;" styleClass="field" />
+               </children>
+            </Pane>
+            <Label layoutX="45.0" layoutY="174.0" styleClass="textLabel" text="Member contact" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Pane layoutX="40.0" layoutY="237.0" prefHeight="38.0" prefWidth="234.0" styleClass="textPane">
+               <children>
+                  <FontAwesomeIconView glyphName="TINT" layoutX="210.0" layoutY="23.0" size="14" style="-fx-fill: white;" />
+                  <TextField fx:id="txtGender" layoutX="14.0" layoutY="5.0" onKeyReleased="#textFields_Key_Released" prefHeight="28.0" prefWidth="194.0" promptText="male / female" style="-fx-background-color: #393E46;" styleClass="field" />
+               </children>
+            </Pane>
+            <Label layoutX="46.0" layoutY="228.0" styleClass="textLabel" text="Member gender" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Pane layoutX="40.0" layoutY="292.0" prefHeight="38.0" prefWidth="234.0" styleClass="textPane">
+               <children>
+                  <FontAwesomeIconView glyphName="HOME" layoutX="208.0" layoutY="23.0" size="14" style="-fx-fill: white;" />
+                  <TextField fx:id="txtAddress" layoutX="14.0" layoutY="5.0" onKeyReleased="#textFields_Key_Released" prefHeight="28.0" prefWidth="194.0" promptText="no 2# ####" style="-fx-background-color: #393E46;" styleClass="field" />
+               </children>
+            </Pane>
+            <Label layoutX="46.0" layoutY="283.0" styleClass="textLabel" text="Member address" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Pane layoutX="40.0" layoutY="347.0" prefHeight="38.0" prefWidth="234.0" styleClass="textPane">
+               <children>
+                  <FontAwesomeIconView glyphName="BIRTHDAY_CAKE" layoutX="209.0" layoutY="23.0" size="11" style="-fx-fill: white;" />
+                  <TextField fx:id="txtDateOfBirth" layoutX="14.0" layoutY="5.0" onKeyReleased="#textFields_Key_Released" prefHeight="28.0" prefWidth="194.0" promptText="yyyy-mm-dd" style="-fx-background-color: #393E46;" styleClass="field" />
+               </children>
+            </Pane>
+            <Label layoutX="46.0" layoutY="339.0" styleClass="textLabel" text="Member birthday" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Pane layoutX="40.0" layoutY="402.0" prefHeight="38.0" prefWidth="234.0" styleClass="textPane">
+               <children>
+                  <FontAwesomeIconView glyphName="WRENCH" layoutX="209.0" layoutY="23.0" size="11" style="-fx-fill: white;" />
+                  <TextField fx:id="txtOccupation" layoutX="14.0" layoutY="5.0" onKeyReleased="#textFields_Key_Released" prefHeight="28.0" prefWidth="194.0" promptText="enginner / doctor" style="-fx-background-color: #393E46;" styleClass="field" />
+               </children>
+            </Pane>
+            <Label layoutX="46.0" layoutY="394.0" styleClass="textLabel" text="Member occupation" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="568.0" layoutY="451.0" onAction="#saveMember" prefHeight="32.0" prefWidth="57.0" style="-fx-background-color: #28c00e; -fx-background-radius: 20;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXComboBox fx:id="cmbBodyType" focusColor="#26ff00" layoutX="360.0" layoutY="261.0" prefHeight="25.0" prefWidth="234.0" promptText="Body type" styleClass="choice-box" stylesheets="@../styles/style.css" unFocusColor="WHITE" visible="false" />
+            <JFXComboBox fx:id="cmbTranningType" focusColor="#26ff00" layoutX="360.0" layoutY="299.0" prefHeight="25.0" prefWidth="234.0" promptText="Tranning type" styleClass="choice-box" stylesheets="@../styles/style.css" unFocusColor="WHITE" visible="false" />
+            <JFXComboBox fx:id="cmbTranningHistory" focusColor="#26ff00" layoutX="360.0" layoutY="337.0" prefHeight="25.0" prefWidth="234.0" promptText="Tranning history" styleClass="choice-box" stylesheets="@../styles/style.css" unFocusColor="WHITE" visible="false" />
+            <JFXComboBox fx:id="cmbActivityLevel" focusColor="#26ff00" layoutX="360.0" layoutY="374.0" prefHeight="25.0" prefWidth="234.0" promptText="Activity level" styleClass="choice-box" stylesheets="@../styles/style.css" unFocusColor="WHITE" visible="false" />
+            <JFXComboBox fx:id="cmbCurrentDiet" focusColor="#26ff00" layoutX="360.0" layoutY="409.0" prefHeight="25.0" prefWidth="234.0" promptText="Current diet" styleClass="choice-box" stylesheets="@../styles/style.css" unFocusColor="WHITE" visible="false" />
+         </children>
+         <styleClass>
+            <String fx:value="pane" />
+            <String fx:value="BottomLeftAndTopLeftPaneRadius" />
+         </styleClass>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,140 @@
+DROP DATABASE IF EXISTS Jym;
+CREATE DATABASE IF NOT EXISTS Jym;
+SHOW DATABASES;
+USE Jym;
+
+DROP TABLE IF EXISTS Member;
+CREATE TABLE IF NOT EXISTS Member(
+   id VARCHAR(15),
+   name VARCHAR(45) NOT NULL DEFAULT 'Unknown',
+   contact VARCHAR(15),
+   gender VARCHAR(15),
+   address TEXT,
+   birthday VARCHAR(15),
+   occupation TEXT,
+   CONSTRAINT PRIMARY KEY (id)
+);
+
+SHOW TABLES ;
+DESCRIBE Member;
+
+DROP TABLE IF EXISTS Item;
+CREATE TABLE IF NOT EXISTS Item(
+   itemCode VARCHAR(15),
+   name VARCHAR(45) NOT NULL DEFAULT 'Unknown',
+   description TEXT,
+   qtyOnHand INT DEFAULT 0,     
+   sizes VARCHAR(15),
+   unitPrice DOUBLE DEFAULT 0.00,
+   CONSTRAINT PRIMARY KEY (itemCode)
+);
+SHOW TABLES ;
+DESCRIBE Item;
+
+DROP TABLE IF EXISTS Supplement;
+CREATE TABLE IF NOT EXISTS Supplement(
+   supplementCode VARCHAR(15),
+   name VARCHAR(45) NOT NULL DEFAULT 'Unknown',
+   description TEXT,
+   qtyOnHand INT DEFAULT 0,     
+   sizes VARCHAR(15),
+   unitPrice DOUBLE DEFAULT 0.00,
+   flavours VARCHAR(45),
+   CONSTRAINT PRIMARY KEY (supplementCode)
+);
+SHOW TABLES ;
+DESCRIBE Supplement;
+
+DROP TABLE IF EXISTS Coach;
+CREATE TABLE IF NOT EXISTS Coach(
+   coachId VARCHAR(15),
+   name VARCHAR(45) NOT NULL DEFAULT 'Unknown',
+   contact VARCHAR(15),
+   gender VARCHAR(15),
+   address TEXT,
+   age INT DEFAULT 0, 
+   userName VARCHAR(45),
+   password VARCHAR(45),
+   CONSTRAINT PRIMARY KEY (coachId)
+);
+SHOW TABLES ;
+DESCRIBE Coach;
+
+DROP TABLE IF EXISTS `Order`;
+CREATE TABLE IF NOT EXISTS `Order`(
+   orderId VARCHAR(15),
+   memberId VARCHAR(15),
+   orderDate DATE,
+   time VARCHAR(15),
+   cost DOUBLE,
+   CONSTRAINT PRIMARY KEY (orderId),
+   CONSTRAINT FOREIGN KEY (memberId) REFERENCES Member(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+SHOW TABLES ;
+DESCRIBE `Order`;
+
+DROP TABLE IF EXISTS `OrderDetail`;
+CREATE TABLE IF NOT EXISTS `OrderDetail`(
+   itemCode VARCHAR(15),
+   orderId VARCHAR(15),
+   qty INT,
+   price DOUBLE,
+   CONSTRAINT PRIMARY KEY (itemCode, orderId),
+   CONSTRAINT FOREIGN KEY (itemCode) REFERENCES Item(itemCode) ON DELETE CASCADE ON UPDATE CASCADE ,
+   CONSTRAINT FOREIGN KEY (orderId) REFERENCES `Order`(orderId) ON DELETE CASCADE ON UPDATE CASCADE
+);
+SHOW TABLES ;
+DESCRIBE `OrderDetail`;
+
+DROP TABLE IF EXISTS TimeTable;
+CREATE TABLE IF NOT EXISTS TimeTable(
+   days VARCHAR(15),
+   branchName VARCHAR(45),
+   amToPm VARCHAR(15),
+   pmToPm VARCHAR(15),
+   pmToAm TEXT
+);
+SHOW TABLES;
+DESCRIBE TimeTable;
+
+DROP TABLE IF EXISTS Feedback;
+CREATE TABLE IF NOT EXISTS Feedback(
+   feedbackDate DATE,
+   massage TEXT
+);
+SHOW TABLES;
+DESCRIBE FeedBack;
+
+DROP TABLE IF EXISTS Payment;
+CREATE TABLE IF NOT EXISTS Payment(
+   paymentName VARCHAR(45),
+   validTime VARCHAR(45),
+   price DOUBLE
+);
+SHOW TABLES;
+DESCRIBE Payment;
+
+DROP TABLE IF EXISTS memberPayment;
+CREATE TABLE IF NOT EXISTS memberPayment(
+   paymentId VARCHAR(15),
+   memberId VARCHAR(15),
+   paymentDate DATE,
+   paymentTime VARCHAR(15),
+   cost DOUBLE,
+   CONSTRAINT PRIMARY KEY (paymentId),
+   CONSTRAINT FOREIGN KEY (memberId) REFERENCES Member(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+SHOW TABLES ;
+DESCRIBE memberPayment;
+
+
+DROP TABLE IF EXISTS paymentDetail;
+CREATE TABLE IF NOT EXISTS paymentDetail(
+   paymentId VARCHAR(15),
+   memberId VARCHAR(15),
+   cost DOUBLE,
+   CONSTRAINT PRIMARY KEY (paymentId),
+   CONSTRAINT FOREIGN KEY (memberId) REFERENCES Member(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+SHOW TABLES ;
+DESCRIBE paymentDetail;

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addCoachContext" prefHeight="524.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddCoachFormcontroller">
+   <children>
+      <Pane layoutX="413.0" layoutY="149.0" prefHeight="347.0" prefWidth="261.0" style="-fx-background-color: #393E46;" stylesheets="@../styles/style.css">
+         <children>
+            <ImageView fx:id="imageOne" fitHeight="396.0" fitWidth="406.0" layoutX="-18.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assents/imageedit_1_9830067155.png" />
+               </image>
+            </ImageView>
+            <FontAwesomeIconView fx:id="eyeHide" glyphName="EYE_SLASH" layoutX="14.0" layoutY="24.0" onMouseClicked="#hideImage" size="18" style="-fx-fill: white;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></FontAwesomeIconView>
+            <FontAwesomeIconView fx:id="eyeOpen" glyphName="EYE" layoutX="14.0" layoutY="24.0" onMouseClicked="#openImage" size="18" style="-fx-fill: white;" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></FontAwesomeIconView>
+            <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="14.0" layoutY="39.0" onAction="#saveCoach" prefHeight="35.0" prefWidth="72.0" style="-fx-background-radius: 20; -fx-background-color: #24b50a;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+         <styleClass>
+            <String fx:value="pane" />
+            <String fx:value="BottomRightPaneRadius" />
+         </styleClass>
+      </Pane>
+      <Pane layoutX="15.0" layoutY="5.0" prefHeight="490.0" prefWidth="209.0" style="-fx-background-color: #393E46;" stylesheets="@../styles/style.css">
+         <children>
+            <Pane layoutX="11.0" layoutY="20.0" prefHeight="38.0" prefWidth="188.0" styleClass="textPane" stylesheets="@../styles/style.css">
+               <children>
+                  <FontAwesomeIconView glyphName="TAGS" layoutX="166.0" layoutY="24.0" size="13" style="-fx-fill: white;" />
+                  <TextField fx:id="txtCoachId" layoutX="14.0" layoutY="6.0" onKeyPressed="#textFields_Key_Released" prefHeight="28.0" prefWidth="148.0" promptText="C001" stylesheets="@../styles/style.css">
+                     <styleClass>
+                        <String fx:value="graytext" />
+                        <String fx:value="field" />
+                     </styleClass></TextField>
+                  <Label layoutX="61.0" layoutY="-7.0" styleClass="textLabel" text="Coach id" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="11.0" layoutY="77.0" prefHeight="38.0" prefWidth="188.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtCoachName" layoutX="14.0" layoutY="5.0" onKeyPressed="#textFields_Key_Released" prefHeight="28.0" prefWidth="148.0" promptText="firstname lastname" style="-fx-background-color: #393E46;" styleClass="field" stylesheets="@../styles/style.css" />
+                  <Label layoutX="53.0" layoutY="-7.0" styleClass="textLabel" text="Coach name" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView glyphName="USER" layoutX="168.0" layoutY="24.0" size="13" style="-fx-fill: white;" />
+               </children>
+            </Pane>
+            <Pane layoutX="11.0" layoutY="134.0" prefHeight="38.0" prefWidth="188.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtCoachContact" layoutX="14.0" layoutY="6.0" onKeyPressed="#textFields_Key_Released" prefHeight="28.0" prefWidth="148.0" promptText="07#-#######" style="-fx-background-color: #393E46;" styleClass="field" stylesheets="@../styles/style.css" />
+                  <Label layoutX="48.0" layoutY="-7.0" styleClass="textLabel" text="Coach contact" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView glyphName="PHONE" layoutX="169.0" layoutY="22.0" size="14" style="-fx-fill: white;" />
+               </children>
+            </Pane>
+            <Pane layoutX="11.0" layoutY="191.0" prefHeight="38.0" prefWidth="188.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtCoachGender" layoutX="14.0" layoutY="5.0" onKeyPressed="#textFields_Key_Released" prefHeight="28.0" prefWidth="148.0" promptText="male / female" style="-fx-background-color: #393E46;" styleClass="field" stylesheets="@../styles/style.css" />
+                  <Label layoutX="49.0" layoutY="-7.0" styleClass="textLabel" text="Coach gender" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView glyphName="PUZZLE_PIECE" layoutX="167.0" layoutY="25.0" size="14" style="-fx-fill: white;" wrappingWidth="10.026851177215576" />
+               </children>
+            </Pane>
+            <Pane layoutX="11.0" layoutY="249.0" prefHeight="38.0" prefWidth="188.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtCoachAddress" layoutX="14.0" layoutY="5.0" onKeyPressed="#textFields_Key_Released" prefHeight="28.0" prefWidth="148.0" promptText="no 2# ####" style="-fx-background-color: #393E46;" styleClass="field" stylesheets="@../styles/style.css" />
+                  <Label layoutX="48.0" layoutY="-7.0" styleClass="textLabel" text="Coach address" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView glyphName="HOME" layoutX="166.0" layoutY="23.0" size="15" style="-fx-fill: white;" wrappingWidth="15.999999940395355" />
+               </children>
+            </Pane>
+            <Pane layoutX="11.0" layoutY="306.0" prefHeight="38.0" prefWidth="188.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtCoachAge" layoutX="14.0" layoutY="5.0" onKeyPressed="#textFields_Key_Released" prefHeight="28.0" prefWidth="148.0" promptText="years" style="-fx-background-color: #393E46;" styleClass="field" stylesheets="@../styles/style.css" />
+                  <Label layoutX="52.0" layoutY="-9.0" styleClass="textLabel" text="Member age" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView glyphName="HOURGLASS" layoutX="168.0" layoutY="22.0" size="11" style="-fx-fill: white;" wrappingWidth="15.999999940395355" />
+               </children>
+            </Pane>
+            <Pane layoutX="11.0" layoutY="363.0" prefHeight="38.0" prefWidth="188.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtCoachUserName" layoutX="14.0" layoutY="5.0" onKeyPressed="#textFields_Key_Released" prefHeight="28.0" prefWidth="148.0" promptText="####" style="-fx-background-color: #393E46;" styleClass="field" stylesheets="@../styles/style.css" />
+                  <Label layoutX="43.0" layoutY="-7.0" styleClass="textLabel" text="Coach username" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView glyphName="USER" layoutX="167.0" layoutY="25.0" size="13" style="-fx-fill: white;" />
+               </children>
+            </Pane>
+            <Pane layoutX="11.0" layoutY="420.0" prefHeight="38.0" prefWidth="188.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtCoachPassword" layoutX="14.0" layoutY="5.0" onKeyPressed="#textFields_Key_Released" prefHeight="28.0" prefWidth="148.0" promptText="####" style="-fx-background-color: #393E46;" styleClass="field" stylesheets="@../styles/style.css" />
+                  <Label layoutX="41.0" layoutY="-7.0" styleClass="textLabel" text="Coach password" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView glyphName="LOCK" layoutX="167.0" layoutY="23.0" size="14" style="-fx-fill: white;" />
+               </children>
+            </Pane>
+            <FontAwesomeIconView glyphName="TRASH_ALT" layoutX="128.0" layoutY="479.0" onMouseClicked="#deleteCoach" size="15" style="-fx-fill: white;" />
+            <FontAwesomeIconView glyphName="SEARCH" layoutX="98.0" layoutY="478.0" onMouseClicked="#searchCoach" size="13" style="-fx-fill: white;" />
+            <ImageView fitHeight="15.0" fitWidth="14.0" layoutX="66.0" layoutY="467.0" onMouseClicked="#clearCoachTextField" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assents/icons8-broom-90.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+         <styleClass>
+            <String fx:value="pane" />
+            <String fx:value="BottomLeftAndTopLeftPaneRadius" />
+         </styleClass>
+      </Pane>
+      <Pane layoutX="412.0" layoutY="5.0" prefHeight="138.0" prefWidth="261.0" style="-fx-background-color: #393E46;" stylesheets="@../styles/style.css">
+         <children>
+            <Label layoutX="6.0" layoutY="5.0" text="Write feedback to coach" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtMassage" focusColor="#26ff00" labelFloat="true" layoutX="12.0" layoutY="94.0" prefHeight="25.0" prefWidth="239.0" promptText="Write feedback to coach" styleClass="field" stylesheets="@../styles/style.css" unFocusColor="#b9b9b9" />
+            <JFXButton buttonType="RAISED" layoutX="112.0" layoutY="42.0" onAction="#saveMassage" prefHeight="35.0" prefWidth="52.0" style="-fx-background-color: #393E46 #393E46; -fx-background-radius: 20; -fx-border-color: #28c00e; -fx-border-radius: 20;" text="Send" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <FontAwesomeIconView glyphName="TRASH_ALT" layoutX="201.0" layoutY="22.0" onMouseClicked="#deleteMassage" size="15" style="-fx-fill: white;" />
+            <ImageView fitHeight="15.0" fitWidth="16.0" layoutX="228.0" layoutY="10.0" onMouseClicked="#clearMassage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assents/icons8-broom-90.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <JFXTextField fx:id="txtDate" focusColor="#26ff00" labelFloat="true" layoutX="12.0" layoutY="47.0" onAction="#selectDate" prefHeight="25.0" prefWidth="89.0" promptText="Date" styleClass="field" stylesheets="@../styles/style.css" unFocusColor="#b9b9b9" />
+            <JFXButton buttonType="RAISED" layoutX="173.0" layoutY="42.0" onAction="#updateMassage" prefHeight="35.0" prefWidth="81.0" style="-fx-background-color: #393E46 #393E46; -fx-background-radius: 20; -fx-border-color: #28c00e; -fx-border-radius: 20;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+            <FontAwesomeIconView glyphName="SEARCH" layoutX="230.0" layoutY="112.0" onMouseClicked="#searchMassage" size="13" style="-fx-fill: white;" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <styleClass>
+            <String fx:value="pane" />
+            <String fx:value="TopRightPaneRadius" />
+         </styleClass>
+      </Pane>
+      <Pane layoutX="231.0" layoutY="5.0" onMouseClicked="#openAdminPaymentForm" prefHeight="138.0" prefWidth="175.0" style="-fx-background-color: #393E46;" styleClass="pane" stylesheets="@../styles/style.css">
+         <children>
+            <Label layoutX="23.0" layoutY="8.0" text="Payment analysis" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="102.0" text="Payment of coach" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="AREA_CHART" layoutX="140.0" layoutY="117.0" size="13" style="-fx-fill: white;" />
+            <FontAwesomeIconView glyphName="PIE_CHART" layoutX="66.0" layoutY="84.0" size="44" style="-fx-fill: white;" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Pane layoutX="231.0" layoutY="293.0" prefHeight="138.0" prefWidth="175.0" style="-fx-background-color: #393E46;" styleClass="pane" stylesheets="@../styles/style.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <children>
+            <Label layoutX="17.0" layoutY="39.0" text=" “Don’t count the days," textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="59.0" text="make the days count.”" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="79.0" prefHeight="20.0" prefWidth="110.0" text="-Muhammad Ali-" textFill="#26ff00">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="231.0" layoutY="436.0" prefHeight="59.0" prefWidth="175.0" style="-fx-background-color: #393E46;" styleClass="pane" stylesheets="@../styles/style.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="33.0" layoutY="14.0" onAction="#updateCoach" prefHeight="28.0" prefWidth="110.0" style="-fx-background-color: #393E46 #393E46; -fx-background-radius: 20; -fx-border-color: #28c00e; -fx-border-radius: 20;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane layoutX="231.0" layoutY="149.0" prefHeight="138.0" prefWidth="175.0" style="-fx-background-color: #393E46;" styleClass="pane" stylesheets="@../styles/style.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <children>
+            <Label layoutX="50.0" layoutY="9.0" text="All coachs" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="51.0" layoutY="104.0" text="All of coach" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="BOOKMARK" layoutX="151.0" layoutY="27.0" size="13" style="-fx-fill: white;" text="" />
+            <Label fx:id="lblCoach" layoutX="96.0" layoutY="51.0" text="01" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="66.0" layoutY="51.0" text="0" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="51.0" text="0" textFill="#26ff00">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="USER" layoutX="39.0" layoutY="77.0" size="25" style="-fx-fill: white;" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
