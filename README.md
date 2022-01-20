@@ -1,5 +1,5 @@
 <h2 align="center">
-The-Gym
+The Gym
 </h2>
 
 <h5 align="center">
