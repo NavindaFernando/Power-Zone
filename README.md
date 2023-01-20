@@ -2,7 +2,7 @@
 The Gym :muscle:
 </h3>
 
-![dash ui](https://user-images.githubusercontent.com/86073690/150295918-19d3b94b-e6db-4351-bbe2-4dc5215c3d7e.jpg)
+![Frame 10](https://user-images.githubusercontent.com/86073690/213695155-cec199c3-f102-4392-99a8-f75edaeb7a34.jpg)
 
 ***
 
