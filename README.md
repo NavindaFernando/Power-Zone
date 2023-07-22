@@ -1,5 +1,5 @@
 <h3 align="center">
-The Gym :muscle:
+Power Zone :muscle:
 </h3>
 
 ![Frame 10](https://user-images.githubusercontent.com/86073690/213695155-cec199c3-f102-4392-99a8-f75edaeb7a34.jpg)
